@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Сергей Кулеш](https://up.htmlacademy.ru/adaptive/13/user/527731).
-* Наставник: [Александр Половников](https://vk.com/alekspol).
+* Студент:
+* Наставник:
 
 ---
 
@@ -9,7 +9,7 @@
 
 Полезный файл:
 
-- [Contributing.md](Contributing.md) — руководство по внесению изменений.
+* [Contributing.md](Contributing.md) — руководство по внесению изменений.
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
 _`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`, `package-lock.json`, `package.json`._

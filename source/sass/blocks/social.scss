@@ -1,0 +1,17 @@
+.social {
+  outline: 2px dashed black;
+  margin: 40px 0;
+  text-align: center;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px;
+  }
+}

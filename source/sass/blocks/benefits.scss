@@ -1,0 +1,17 @@
+.benefits {
+  outline: 2px dashed lightgreen;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding: 35px 20px;
+
+    &__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    color: $black;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    margin: 0;
+  }
+}

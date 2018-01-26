@@ -1,0 +1,26 @@
+.item-gallery {
+    outline: 2px dashed pink;
+    padding: 20px;
+    border-bottom: 1px solid $border-grey;
+
+    &__image-holder {
+      padding-bottom: 20px;
+      font-size: 0;
+    }
+
+    &__title {
+      display: block;
+    }
+
+    &__author {
+      display: block;
+      text-transform: none;
+      margin: 5px 0 10px;
+    }
+
+    &__likes {
+      display: block;
+      font-weight: 700;
+
+    }
+}

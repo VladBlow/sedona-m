@@ -1,0 +1,17 @@
+.promo-video {
+  outline: 2px dashed purple;
+  padding: 20px;
+  text-align: center;
+  background-color: $white;
+  color: $black;
+
+  &__title {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+
+  &__video-holder {
+    background: url("img/video-mobile@1x.jpg") 0 0 no-repeat;
+  }
+}

@@ -7,9 +7,7 @@
 
   &__title {
     display: block;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 26px;
+    @include font(18px, 26px, 700);
     color: $black;
     padding-bottom: 15px;
     margin: 0;

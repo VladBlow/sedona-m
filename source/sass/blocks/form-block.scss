@@ -4,18 +4,14 @@
   background-color: $white;
   border-bottom: 1px solid $border-grey;
 
-  &--last {
+  &:last-of-type {
     border-bottom: none;
-    padding: 20px;
-    background-color: $white;
     margin-bottom: 30px;
   }
 
   &__title {
     display: block;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 700;
+    @include font(18px, 26px, 700);
     color: $black;
     margin-bottom: 20px;
     text-align: center;
@@ -32,9 +28,7 @@
   }
 
   &__desc {
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 700;
+    @include font(18px, 26px, 700);
     text-transform: none;
   }
 
@@ -43,17 +37,13 @@
     border: none;
     padding: 20px;
     color: $black;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 700;
+    @include font(18px, 26px, 700);
   }
 
   &__input-textarea {
     resize: none;
     background-color: $input-grey;
     color: $black;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 700;
+    @include font(18px, 26px, 700);
   }
 }

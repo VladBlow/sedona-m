@@ -7,9 +7,7 @@
   &__tag {
     display: inline-block;
     vertical-align: middle;
-    font-size: 21px;
-    font-weight: 700;
-    line-height: 26px;
+    @include font(21px, 26px, 700);
     color: $black;
     }
 }

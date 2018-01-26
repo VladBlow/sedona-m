@@ -15,9 +15,7 @@
 
   &__link {
     color: $white;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 56px;
+    @include font(18px, 56px, 700);
     text-decoration: none;
   }
 }

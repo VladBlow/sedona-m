@@ -6,9 +6,7 @@
   color: $black;
 
   &__title {
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 700;
+    @include font(18px, 26px, 700);
   }
 
   &__video-holder {

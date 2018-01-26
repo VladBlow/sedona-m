@@ -1,0 +1,13 @@
+.main-footer {
+  outline: 2px solid grey;
+  padding: 35px 20px 25px;
+  text-align: center;
+  background-color: $white;
+
+  &__tag {
+    display: inline-block;
+    vertical-align: middle;
+    @include font(21px, 26px, 700);
+    color: $black;
+    }
+}

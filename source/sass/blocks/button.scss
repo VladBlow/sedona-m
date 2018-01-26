@@ -1,0 +1,11 @@
+.main-btn {
+  margin: 20px;
+  padding: 20px;
+  color: $white;
+  background-color: $blue;
+  font-family: PT Sans, Arial, sans-serif;
+  @include font(21px, 26px, 700);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+}

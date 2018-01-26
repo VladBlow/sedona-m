@@ -1,0 +1,49 @@
+.form-block {
+  outline: 2px dashed blue;
+  padding: 20px;
+  background-color: $white;
+  border-bottom: 1px solid $border-grey;
+
+  &:last-of-type {
+    border-bottom: none;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    display: block;
+    @include font(18px, 26px, 700);
+    color: $black;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    padding: 15px;
+    line-height: 26px;
+  }
+
+  &__desc {
+    @include font(18px, 26px, 700);
+    text-transform: none;
+  }
+
+  &__input-text {
+    background-color: $input-grey;
+    border: none;
+    padding: 20px;
+    color: $black;
+    @include font(18px, 26px, 700);
+  }
+
+  &__input-textarea {
+    resize: none;
+    background-color: $input-grey;
+    color: $black;
+    @include font(18px, 26px, 700);
+  }
+}

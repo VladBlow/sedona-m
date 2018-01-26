@@ -1,0 +1,21 @@
+@import "variables.scss";
+@import "global.scss";
+@import "mixins.scss";
+// блоки
+@import "blocks/main-header.scss";
+@import "blocks/main-menu.scss";
+@import "blocks/intro.scss";
+@import "blocks/feature.scss";
+@import "blocks/pic-holder.scss";
+@import "blocks/benefits.scss";
+@import "blocks/find-hotel.scss";
+@import "blocks/main-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/button.scss";
+//форма
+@import "blocks/form-block.scss";
+//фото
+@import "blocks/gallery.scss";
+@import "blocks/item-gallery.scss";
+@import "blocks/promo-video.scss";
+

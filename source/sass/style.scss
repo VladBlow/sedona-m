@@ -1,7 +1,9 @@
 @import "variables.scss";
 @import "global.scss";
 @import "mixins.scss";
-// блоки
+//вспомогательные
+@import "helpers.scss";
+//блоки
 @import "blocks/main-header.scss";
 @import "blocks/main-menu.scss";
 @import "blocks/intro.scss";
@@ -9,8 +11,10 @@
 @import "blocks/pic-holder.scss";
 @import "blocks/benefits.scss";
 @import "blocks/find-hotel.scss";
+@import "blocks/map-holder.scss";
 @import "blocks/main-footer.scss";
 @import "blocks/social.scss";
+@import "blocks/copyright.scss";
 @import "blocks/button.scss";
 //форма
 @import "blocks/form-block.scss";

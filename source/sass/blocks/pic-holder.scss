@@ -1,4 +1,21 @@
 .pic-holder {
   outline: 2px dotted red;
-  display: block;
+
+  &--city {
+    background: url("../img/main-city-mobile@1x.jpg") 0 0 no-repeat;
+    background-size: cover;
+  }
+
+  &--bridge {
+    background: url("../img/photo-bridge-mobile@1x.jpg") 0 0 no-repeat;
+    background-size: cover;
+  }
+}
+
+
+
+@media (min-width: $tablet) {
+  .pic-holder {
+    width: 66.66%;
+  }
 }

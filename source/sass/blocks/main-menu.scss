@@ -1,11 +1,14 @@
 .main-menu {
+  outline: 2px solid pink;
+  min-height: 56px;
   text-align: center;
   background-color: $blue;
 
   &__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    @include unstyle;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__item {
@@ -17,5 +20,30 @@
     color: $white;
     @include font(18px, 56px, 700);
     text-decoration: none;
+
+    &--logo {
+
+    }
+  }
+}
+
+
+
+@media (min-width: $tablet) {
+  .main-menu {
+
+    &__list {
+      flex-direction: row;
+    }
+
+    &__item {
+      &:last-child {
+        order: 1;
+      }
+
+      &:nth-child(3), &:nth-child(4) {
+        order: 2;
+      }
+    }
   }
 }

@@ -2,6 +2,18 @@
   outline: 2px solid grey;
 
   &__greetings {
-    background: url("img/bg-back-mobile@1x.jpg") 0 0 no-repeat;
+    outline: 2px solid yellow;
+    height: 390px;
+    background: url("../img/bg-back-mobile@1x.jpg") 0 0 no-repeat;
+    background-size: cover;
+  }
+}
+
+
+@media (min-width: $tablet) {
+  .main-header {
+    &__greetings {
+      height: 520px;
+    }
   }
 }

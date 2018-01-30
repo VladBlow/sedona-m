@@ -3,3 +3,14 @@
   line-height: $height;
   font-weight: $weight;
 }
+
+@mixin unstyle() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}

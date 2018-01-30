@@ -1,15 +1,37 @@
 .benefits {
-  outline: 2px dashed lightgreen;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  padding: 35px 20px;
+  padding: 25px 0 40px;
+  @include unstyle;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    &__title {
+  &__item {
+    outline: 2px solid lightgreen;
+    padding: 10px 40px 0 70px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
     @include font(18px, 26px, 700);
+    display: block;
     color: $black;
-    padding-top: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     margin: 0;
+  }
+
+  &__text {
+    margin: 0;
+  }
+}
+
+@media (min-width: $tablet) {
+  .benefits {
+    flex-direction: row;
+
+    &__item {
+      width: 33.33%;
+      padding: 60px 50px;
+      text-align: center;
+    }
   }
 }

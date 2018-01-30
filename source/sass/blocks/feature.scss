@@ -1,5 +1,5 @@
 .feature {
-  outline: 2px dashed yellow;
+  outline: 2px solid #ffcc00;
   background-color: $light-grey;
   text-align: center;
   padding: 30px 20px;
@@ -33,3 +33,10 @@
   }
 }
 
+
+@media (min-width: $tablet) {
+  .feature {
+    width: 33.33%;
+    box-sizing: border-box;
+  }
+}

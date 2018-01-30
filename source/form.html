@@ -3,104 +3,109 @@
   <head>
     <meta charset="utf-8">
     <title>Седона — Форма отзыва</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-      <div class="main-menu">
-        <button></button>
-        <ul class="main-menu__list">
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Главная</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="photo.html">Фото и видео</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="form.html">Форма отзыва</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
-      <div class="main-header__logo-holder">
-        <img src="#" width="102" height="83" alt="Логотип">
-        <button></button>
-      </div>
-      <div class="main-header__greetings main-header__greetings--short">
-        <img src="#" width="320" height="389" alt="Седона">
-      </div>
-    </header>
+        <div class="main-menu">
+          <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Главная</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="photo.html">Фото и видео</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">HTML Academy</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link main-menu__link--logo">
+                <img src="#" width="102" height="83" alt="Логотип">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-header__greetings">
+          <img src="#" width="320" height="389" alt="Седона">
+        </div>
+      </header>
     <main>
       <section class="intro">
         <h2 class="intro__title">Оставьте свой отзыв</h2>
         <p class="intro__text--form">Помогите нашим отелям стать лучше!<br>
         Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <div class="form-block">
+      <form class="flex-row" action="https://echo.htmlacademy.ru" method="post">
+        <div class="form-block form-block--name">
           <b class="form-block__title">Представьтесь:</b>
-          <label>
+          <label class="form-block__item">
             <span class="form-block__subtitle">Имя*</span>
             <input class="form-block__input-text" type="text" name="name">
           </label>
-          <label>
+          <label class="form-block__item">
             <span class="form-block__subtitle">Фамилия*</span>
             <input class="form-block__input-text" type="text" name="last-name">
           </label>
-          <label>
+          <label class="form-block__item">
             <span class="form-block__subtitle">Отчество*</span>
             <input class="form-block__input-text" type="text" name="fathers-name">
           </label>
         </div>
-        <div class="form-block">
+        <div class="form-block form-block--contacts">
           <b class="form-block__title">Контактная информация:</b>
-          <label>
+          <label class="form-block__item">
             <span class="form-block__subtitle">Контактный телефон*</span>
             <input class="form-block__input-text form-block__input-text--contacts form-block__input-text--phone" type="phone" name="phone" placeholder="Введите телефон">
           </label>
-          <label>
+          <label class="form-block__item">
             <span class="form-block__subtitle">Электронная почта*</span>
             <input class="form-block__input-text form-block__input-text--contacts form-block__input-text--email" type="email" name="email" placeholder="Введите e-mail">
           </label>
         </div>
-        <div class="form-block">
+        <div class="form-block form-block--rate">
           <b class="form-block__title">Ваше общее впечатление:</b>
-          <label>
+          <label class="form-block__item">
             <input class="form-block__input-radio" type="radio" name="impress" value="good" checked>
             <span class="form-block__desc">Скорее положительное</span>
           </label>
-          <label>
+          <label class="form-block__item">
             <input class="form-block__input-radio" type="radio" name="impress" value="bad">
             <span class="form-block__desc">Скорее отрицательное</span>
           </label>
-          <label>
+          <label class="form-block__item">
             <input class="form-block__input-radio" type="radio" name="impress" value="neutral">
             <span class="form-block__desc">Затрудняюсь ответить</span>
           </label>
         </div>
-        <div class="form-block">
+        <div class="form-block form-block--visited">
           <b class="form-block__title">Посещенные достопримечательности:</b>
-          <label>
-            <input class="form-block__input-checkbox" type="checkbox" name="Devils bridge" checked>
-            <span class="form-block__desc">Мост Дьявола</span>
-          </label>
-          <label>
-            <input class="form-block__input-checkbox" type="checkbox" name="Slide-park" checked>
-            <span class="form-block__desc">Слайд-парк</span>
-          </label>
-          <label>
-            <input class="form-block__input-checkbox" type="checkbox" name="Bell rock">
-            <span class="form-block__desc">Гора-Колокол</span>
-          </label>
-          <label>
-            <input class="form-block__input-checkbox" type="checkbox" name="Red rocks" checked>
-            <span class="form-block__desc">Красные скалы</span>
-          </label>
+          <div class="flex-column">
+            <label class="form-block__item">
+              <input class="form-block__input-checkbox" type="checkbox" name="Devils bridge" checked>
+              <span class="form-block__desc">Мост Дьявола</span>
+            </label>
+            <label class="form-block__item">
+              <input class="form-block__input-checkbox" type="checkbox" name="Slide-park" checked>
+              <span class="form-block__desc">Слайд-парк</span>
+            </label>
+          </div>
+          <div class="flex-column">
+            <label class="form-block__item">
+              <input class="form-block__input-checkbox" type="checkbox" name="Bell rock">
+              <span class="form-block__desc">Гора-Колокол</span>
+            </label>
+            <label class="form-block__item">
+              <input class="form-block__input-checkbox" type="checkbox" name="Red rocks" checked>
+              <span class="form-block__desc">Красные скалы</span>
+            </label>
+          </div>
         </div>
-        <div class="form-block">
+        <div class="form-block form-block--textarea">
           <b class="form-block__title">Опишите свои эмоции:</b>
           <textarea class="form-block__input-textarea" name="review" placeholder="Опишите подробно все свои восторги"></textarea>
         </div>

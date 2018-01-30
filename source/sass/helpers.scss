@@ -18,3 +18,19 @@
     flex-direction: row;
   }
 }
+
+.flex-row {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}

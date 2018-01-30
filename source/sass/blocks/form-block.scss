@@ -1,8 +1,32 @@
 .form-block {
-  outline: 2px dashed blue;
+  outline: 2px solid blue;
   padding: 20px;
   background-color: $white;
   border-bottom: 1px solid $border-grey;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  &--name {
+    .form-block__item {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 15px;
+      justify-content: flex-start;
+    }
+
+    .form-block__input-text {
+      width: 100%;
+    }
+  }
+
+  &--contacts {
+    .form-block__item {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 
   &:last-of-type {
     border-bottom: none;
@@ -17,11 +41,6 @@
     text-align: center;
   }
 
-  label {
-    display: block;
-    margin-bottom: 20px;
-  }
-
   &__subtitle {
     padding: 15px;
     line-height: 26px;
@@ -33,17 +52,48 @@
   }
 
   &__input-text {
+    @include font(18px, 26px, 700);
     background-color: $input-grey;
     border: none;
     padding: 20px;
     color: $black;
-    @include font(18px, 26px, 700);
   }
 
   &__input-textarea {
+    @include font(18px, 26px, 700);
     resize: none;
     background-color: $input-grey;
     color: $black;
-    @include font(18px, 26px, 700);
+  }
+}
+
+
+@media (min-width: $tablet) {
+  .form-block {
+    width: 50%;
+
+    &--rate {
+      order: -1;
+    }
+
+    &--contacts {
+      width: 100%;
+    }
+
+    &--visited {
+      width: 70%;
+      margin: 0 auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .form-block__title {
+        width: 100%;
+      }
+    }
+
+    &--textarea {
+      width: 100%;
+    }
   }
 }

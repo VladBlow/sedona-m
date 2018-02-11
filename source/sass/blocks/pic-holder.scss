@@ -17,5 +17,10 @@
 @media (min-width: $tablet) {
   .pic-holder {
     width: 66.66%;
+    min-height: 260px;
+
+    &--bridge {
+      order: -1;
+    }
   }
 }

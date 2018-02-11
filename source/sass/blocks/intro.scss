@@ -28,5 +28,9 @@
 @media (min-width: $tablet) {
   .intro {
     width: 500px;
+
+    &__title {
+      @include font(30px, 30px, 700);
+    }
   }
 }

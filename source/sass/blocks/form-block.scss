@@ -7,6 +7,14 @@
   flex-direction: column;
   box-sizing: border-box;
 
+  &--rate {
+    .form-block__item {
+      margin-bottom: 23px;
+    }
+
+
+  }
+
   &--name {
     .form-block__item {
       width: 100%;
@@ -47,7 +55,7 @@
   }
 
   &__desc {
-    @include font(18px, 26px, 700);
+    @include font(18px, 56px, 700);
     text-transform: none;
   }
 
@@ -71,13 +79,53 @@
 @media (min-width: $tablet) {
   .form-block {
     width: 50%;
+    padding: 50px 60px;
+    padding-bottom: 0;
+
+    &__title {
+      margin-bottom: 60px;
+      font-size: 21px;
+    }
+
+    &__subtitle {
+      padding: 15px;
+      padding-left: 0;
+    }
 
     &--rate {
       order: -1;
+      padding-right: 40px;
+
+      .form-block__title {
+        text-align: left;
+      }
+
+      .form-block__desc {
+        padding-left: 75px;
+      }
+    }
+
+    &--name {
+      .form-block__title {
+        text-align: left;
+      }
     }
 
     &--contacts {
       width: 100%;
+
+      .form-block__title {
+        margin-bottom: 30px;
+      }
+
+      .form-block__subtitle {
+        line-height: 40px;
+        padding: 0;
+      }
+
+      .form-block__item {
+        margin-bottom: 20px;
+      }
     }
 
     &--visited {
@@ -94,6 +142,13 @@
 
     &--textarea {
       width: 100%;
+
+      .form-block__input-textarea {
+        display: block;
+        height: 120px;
+        padding: 20px;
+        border: none;
+      }
     }
   }
 }

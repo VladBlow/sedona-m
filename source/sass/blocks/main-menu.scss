@@ -3,6 +3,7 @@
   min-height: 56px;
   text-align: center;
   background-color: $blue;
+  color: $white;
 
   &__list {
     @include unstyle;
@@ -31,12 +32,17 @@
 
 @media (min-width: $tablet) {
   .main-menu {
+    background-color: $white;
+    color: $black;
+
 
     &__list {
       flex-direction: row;
     }
 
     &__item {
+      border: none;
+
       &:last-child {
         order: 1;
       }
@@ -44,6 +50,11 @@
       &:nth-child(3), &:nth-child(4) {
         order: 2;
       }
+    }
+
+    &__link {
+      font-size: 14px;
+      color: $black;
     }
   }
 }

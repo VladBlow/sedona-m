@@ -9,6 +9,10 @@
     outline: 2px solid lightgreen;
     padding: 10px 40px 0 70px;
     margin-bottom: 20px;
+
+    &:first-child {
+      order: -2;
+    }
   }
 
   &__title {
@@ -30,8 +34,13 @@
 
     &__item {
       width: 33.33%;
-      padding: 60px 50px;
+      padding: 160px 50px 60px;
+      margin: 0;
       text-align: center;
+
+      &:nth-child(3) {
+        order: -1;
+      }
     }
   }
 }

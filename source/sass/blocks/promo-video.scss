@@ -1,11 +1,17 @@
 .promo-video {
-  padding: 20px;
   text-align: center;
   background-color: $white;
   color: $black;
 
   &__title {
+    display: inline-block;
+    padding: 20px;
     @include font(18px, 26px, 700);
+  }
+
+  &__text {
+    padding: 0 20px 40px;
+    margin: 0;
   }
 
   &__holder {
@@ -13,15 +19,36 @@
     display: block;
     margin: 0 auto;
     width: 100%;
-    height: 200px;
-    background: url("../img/video-mobile@1x.jpg") 0 0 no-repeat;
+    min-height: 200px;
+    background: url("../img/video-mobile@2x.jpg") 0 0 no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (min-width: $tablet) {
+  .promo-video {
+    padding: 0;
+
+    &__title {
+      @include font(30px, 30px, 700);
+      padding-top: 0;
+    }
+
+    &__holder {
+      min-height: 500px;
+      background: url("../img/video-tablet@2x.jpg") 0 0 no-repeat;
+      background-size: cover;
+    }
   }
 }
 
 @media (min-width: $desktop) {
   .promo-video {
+
     &__holder {
       width: 66.66%;
+      background: url("../img/video-desktop@2x.jpg") 0 0 no-repeat;
+      background-size: cover;
     }
   }
 }

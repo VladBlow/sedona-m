@@ -2,9 +2,35 @@
   outline: 2px solid lightgreen;
   margin: 0 auto;
   width: auto;
+  background-color: $white;
 
   @media (min-width: $desktop) {
-    width: $desktop;
+    width: 1200px;
+  }
+
+  &--form {
+    margin: 0 20px;
+    width: auto;
+
+    @include tablet {
+      margin: 0 60px;
+    }
+
+    @include desktop {
+      margin: 0 120px;
+    }
+  }
+
+  &--photo {
+
+    @media (min-width: $tablet) {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100%;
+    }
   }
 }
 

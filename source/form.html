@@ -8,7 +8,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header class="main-header">
+    <div class="container">
+      <header class="main-header">
         <div class="main-menu">
           <ul class="main-menu__list">
             <li class="main-menu__item">
@@ -24,119 +25,137 @@
               <a class="main-menu__link" href="#">HTML Academy</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link main-menu__link--logo">
-                <img src="#" width="102" height="83" alt="Логотип">
-              </a>
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="img/logo-sedona-desktop.svg">
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/logo-sedona-tablet.svg">
+                <img src="img/logo-sedona-mobile.svg" alt="Логотип">
+              </picture>
             </li>
           </ul>
         </div>
-        <div class="main-header__greetings">
-          <img src="#" width="320" height="389" alt="Седона">
-        </div>
+        <div class="main-header__greetings main-header__greetings--form"></div>
       </header>
-    <main>
-      <section class="intro">
-        <h2 class="intro__title">Оставьте свой отзыв</h2>
-        <p class="intro__text--form">Помогите нашим отелям стать лучше!<br>
-        Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-      </section>
-      <form class="flex-row" action="https://echo.htmlacademy.ru" method="post">
-        <div class="form-block form-block--name">
-          <b class="form-block__title">Представьтесь:</b>
-          <label class="form-block__item">
-            <span class="form-block__subtitle">Имя*</span>
-            <input class="form-block__input-text" type="text" name="name">
-          </label>
-          <label class="form-block__item">
-            <span class="form-block__subtitle">Фамилия*</span>
-            <input class="form-block__input-text" type="text" name="last-name">
-          </label>
-          <label class="form-block__item">
-            <span class="form-block__subtitle">Отчество*</span>
-            <input class="form-block__input-text" type="text" name="fathers-name">
-          </label>
-        </div>
-        <div class="form-block form-block--contacts">
-          <b class="form-block__title">Контактная информация:</b>
-          <label class="form-block__item">
-            <span class="form-block__subtitle">Контактный телефон*</span>
-            <input class="form-block__input-text form-block__input-text--contacts form-block__input-text--phone" type="phone" name="phone" placeholder="Введите телефон">
-          </label>
-          <label class="form-block__item">
-            <span class="form-block__subtitle">Электронная почта*</span>
-            <input class="form-block__input-text form-block__input-text--contacts form-block__input-text--email" type="email" name="email" placeholder="Введите e-mail">
-          </label>
-        </div>
-        <div class="form-block form-block--rate">
-          <b class="form-block__title">Ваше общее впечатление:</b>
-          <label class="form-block__item">
-            <input class="form-block__input-radio" type="radio" name="impress" value="good" checked>
-            <span class="form-block__desc">Скорее положительное</span>
-          </label>
-          <label class="form-block__item">
-            <input class="form-block__input-radio" type="radio" name="impress" value="bad">
-            <span class="form-block__desc">Скорее отрицательное</span>
-          </label>
-          <label class="form-block__item">
-            <input class="form-block__input-radio" type="radio" name="impress" value="neutral">
-            <span class="form-block__desc">Затрудняюсь ответить</span>
-          </label>
-        </div>
-        <div class="form-block form-block--visited">
-          <b class="form-block__title">Посещенные достопримечательности:</b>
-          <div class="flex-column">
-            <label class="form-block__item">
-              <input class="form-block__input-checkbox" type="checkbox" name="Devils bridge" checked>
-              <span class="form-block__desc">Мост Дьявола</span>
-            </label>
-            <label class="form-block__item">
-              <input class="form-block__input-checkbox" type="checkbox" name="Slide-park" checked>
-              <span class="form-block__desc">Слайд-парк</span>
-            </label>
-          </div>
-          <div class="flex-column">
-            <label class="form-block__item">
-              <input class="form-block__input-checkbox" type="checkbox" name="Bell rock">
-              <span class="form-block__desc">Гора-Колокол</span>
-            </label>
-            <label class="form-block__item">
-              <input class="form-block__input-checkbox" type="checkbox" name="Red rocks" checked>
-              <span class="form-block__desc">Красные скалы</span>
-            </label>
-          </div>
-        </div>
-        <div class="form-block form-block--textarea">
-          <b class="form-block__title">Опишите свои эмоции:</b>
-          <textarea class="form-block__input-textarea" name="review" placeholder="Опишите подробно все свои восторги"></textarea>
-        </div>
-        <button class="main-btn" type="submit">Отправить отзыв</button>
-      </form>
-      <footer class="main-footer">
-        <b class="main-footer__tag">#VISITSEDONA</b>
-        <div class="social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <img src="#" width="48" height="48">
+      <main>
+        <!-- <div class="container container--form"> -->
+          <section class="intro">
+            <h2 class="intro__title">Оставьте свой отзыв</h2>
+            <p class="intro__text--form">Помогите нашим отелям стать лучше!<br>
+            Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          </section>
+          <form class="flex-row" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form-block form-block--name">
+              <b class="form-block__title">Представьтесь:</b>
+              <label class="form-block__item">
+                <span class="form-block__subtitle">Имя*</span>
+                <input class="form-block__input-text" type="text" name="name" placeholder="Петр">
+              </label>
+              <label class="form-block__item">
+                <span class="form-block__subtitle">Фамилия*</span>
+                <input class="form-block__input-text" type="text" name="last-name" placeholder="Иванов">
+              </label>
+              <label class="form-block__item">
+                <span class="form-block__subtitle">Отчество*</span>
+                <input class="form-block__input-text" type="text" name="fathers-name" placeholder="Александрович">
+              </label>
+            </div>
+            <div class="form-block form-block--contacts">
+              <b class="form-block__title">Контактная информация:</b>
+              <label class="form-block__item">
+                <span class="form-block__subtitle">Контактный телефон*:</span>
+                <input class="form-block__input-text form-block__input-text--contacts form-block__input-text--phone" type="phone" name="phone" placeholder="Введите телефон">
+              </label>
+              <label class="form-block__item">
+                <span class="form-block__subtitle">Электронная почта*:</span>
+                <input class="form-block__input-text form-block__input-text--contacts form-block__input-text--email" type="email" name="email" placeholder="Введите e-mail">
+              </label>
+            </div>
+            <div class="form-block form-block--rate">
+              <b class="form-block__title">Ваше общее впечатление:</b>
+              <div class="form-block__item">
+                <input class="form-block__input-radio" type="radio" name="impress" value="good" id="good" checked>
+                <label class="form-block__desc" for="good">Скорее положительное</label>
+              </div>
+              <div class="form-block__item">
+                <input class="form-block__input-radio" type="radio" name="impress" value="bad" id="bad">
+                <label class="form-block__desc" for="bad">Скорее отрицательное</label>
+              </div>
+              <div class="form-block__item">
+                <input class="form-block__input-radio" type="radio" name="impress" value="neutral" id="neutral">
+                <label class="form-block__desc" for="neutral">Затрудняюсь ответить</label>
+              </div>
+            </div>
+            <div class="form-block form-block--visited">
+              <b class="form-block__title">Посещенные достопримечательности:</b>
+              <div class="flex-column">
+                <div class="form-block__item">
+                  <input class="form-block__input-checkbox" type="checkbox" name="Devils bridge" id="Devils bridge" checked>
+                  <label class="form-block__desc" for="Devils bridge">Мост Дьявола</label>
+                </div>
+                <div class="form-block__item">
+                  <input class="form-block__input-checkbox" type="checkbox" name="Slide-park" id="Slide-park" checked>
+                  <label class="form-block__desc" for="Slide-park">Слайд-парк</label>
+                </div>
+              </div>
+              <div class="flex-column">
+                <div class="form-block__item">
+                  <input class="form-block__input-checkbox" type="checkbox" name="Bell rock" id="Bell rock">
+                  <label class="form-block__desc" for="Bell rock">Гора-Колокол</label>
+                </div>
+                <div class="form-block__item">
+                  <input class="form-block__input-checkbox" type="checkbox" name="Red rocks" id="Red rocks" checked>
+                  <label class="form-block__desc" for="Red rocks">Красные скалы</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-block form-block--textarea">
+              <b class="form-block__title">Опишите свои эмоции:</b>
+              <textarea class="form-block__input-textarea" name="review" placeholder="Опишите подробно все свои восторги"></textarea>
+            </div>
+            <button class="main-btn" type="submit">Отправить отзыв</button>
+          </form>
+          <footer class="main-footer">
+            <b class="main-footer__tag">#VISITSEDONA</b>
+            <div class="social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg class="social__twi">
+                      <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a  class="social__link" href="#">
+                    <svg class="social__twi">
+                      <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg class="social__twi">
+                      <use xlink:href="#icon-youtube"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright">
+              <a class="copyright__link" href="htmlacademy.ru">
+                <span class="copyright__title">Разработано</span>
+                <svg class="htmlacademy">
+                  <use xlink:href="#htmlacademy"></use>
+                </svg>
               </a>
-            </li>
-            <li class="social__item">
-              <a  class="social__link" href="#">
-                <img src="#" width="48" height="48">
-              </a>
-            </li>
-            <li class="social__item">
-              <a  class="social__link" href="#">
-                <img src="#" width="48" height="48">
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="copyright">
-          <span class="copyright__title">Разработано</span>
-          <a class="copyright__link" href="htmlacademy.ru"></a>
-        </div>
-      </footer>
-    </main>
+            </div>
+          </footer>
+        <!-- </div> -->
+      </main>
+    </div>
+    <script type="text/javascript" src="js/inject-sprite.js"></script>
   </body>
 </html>

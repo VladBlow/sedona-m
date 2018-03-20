@@ -37,7 +37,18 @@
 @media (min-width: $tablet) {
   .feature {
     width: 33.33%;
-    padding: 45px 40px;
+    padding: 50px 0;
     box-sizing: border-box;
+
+    &__title {
+      @include font(21px, 26px, 700);
+      padding: 0 50px 15px;
+    }
+
+    &__text {
+      padding: 0 45px;
+    }
   }
+
+
 }

@@ -8,4 +8,14 @@
   text-transform: uppercase;
   cursor: pointer;
   border: none;
+
+  @include tablet {
+    width: 42%;
+    margin-left: 60px;
+  }
+
+  @include desktop {
+    width: 42%;
+    margin-left: 120px;
+  }
 }

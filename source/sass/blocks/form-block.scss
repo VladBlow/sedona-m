@@ -1,11 +1,15 @@
 .form-block {
-  outline: 2px solid blue;
   padding: 20px;
   background-color: $white;
   border-top: 1px solid $border-grey;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+
+  &:last-of-type {
+    border-bottom: none;
+    padding-bottom: 30px;
+  }
 
   &__title {
     display: block;
@@ -31,18 +35,34 @@
     color: $black;
   }
 
-  &__input-radio, &__input-checkbox {
-    display: none;
-  }
-
   &__input-text {
     @include font(18px, 26px, 700);
     background-color: $input-grey;
     border: none;
     padding: 20px;
     color: $black;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: #e5e5e5;
+    }
+
+    &:focus {
+      background-color: white;
+      outline: 4px solid #e5e5e5;
+    }
   }
 
+  &__desc {
+    position: relative;
+    padding: 21px 0 21px 70px;
+    @include font(18px, 56px, 700);
+    text-transform: none;
+  }
+
+  &__input-radio, &__input-checkbox {
+    display: none;
+  }
 
   &--rate, &--visited {
     .form-block__item {
@@ -82,28 +102,74 @@
     }
   }
 
-  &:last-of-type {
-    border-bottom: none;
-    padding-bottom: 30px;
-  }
-
-  &--visited {
-    .form-block__item {
-      margin-bottom: 23px;
-    }
-
+  &--rate {
     .form-block__desc {
-      @include font(18px, 56px, 700);
-      text-transform: none;
-      padding-left: 80px;
-      position: relative;
 
       &::before {
-        border-radius: 8px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        content: "";
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: $body-grey;
       }
 
       &::after {
-        background: url("img/icon-tick.svg");
+        display: none;
+        position: absolute;
+        top: 17px;
+        left: 17px;
+        content: "";
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: $dark-grey;
+      }
+
+      &:hover > &::before {
+          background-color: #e5e5e5;
+        }
+      }
+
+      &:active {
+        .form-block__desc::before {
+          background-color: #d5d5d5;
+        }
+
+        .form-block__desc::after {
+          opacity: 0.3;
+        }
+      }
+    }
+
+  &--visited {
+    .form-block__desc {
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        content: "";
+        width: 56px;
+        height: 56px;
+        border-radius: 8px;
+        background-color: $body-grey;
+      }
+
+      &::after {
+        display: none;
+        position: absolute;
+        top: 17px;
+        left: 17px;
+        content: "";
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: $dark-grey;
       }
     }
   }
@@ -121,6 +187,7 @@
   .form-block {
     width: 50%;
     padding: 20px 60px;
+    border: none;
 
     &--rate {
       order: -1;
@@ -128,10 +195,6 @@
 
       .form-block__title {
         text-align: left;
-      }
-
-      .form-block__desc {
-        padding-left: 75px;
       }
     }
 

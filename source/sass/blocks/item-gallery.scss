@@ -1,12 +1,10 @@
 .item-gallery {
-  outline: 2px solid pink;
   padding: 20px;
   border-bottom: 1px solid $border-grey;
   width: 100%;
   box-sizing: border-box;
 
   &__image-holder {
-    outline: 1px solid red;
     font-size: 0;
 
     img {

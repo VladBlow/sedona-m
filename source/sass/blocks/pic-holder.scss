@@ -1,5 +1,4 @@
 .pic-holder {
-  outline: 2px dotted red;
   min-height: 260px;
 
   &--city {
@@ -29,7 +28,7 @@
     &--city {
       background-image: url("../img/main-city-tablet@1x.jpg");
 
-      include retina {
+      @include retina {
       background-image: url("../img/main-city-tablet@2x.jpg");
       }
     }
@@ -37,7 +36,7 @@
     &--bridge {
       background-image: url("../img/main-bridge-tablet@1x.jpg");
 
-      include retina {
+      @include retina {
       background-image: url("../img/main-bridge-tablet@2x.jpg");
       }
     }

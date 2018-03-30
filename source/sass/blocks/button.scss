@@ -9,6 +9,19 @@
   cursor: pointer;
   border: none;
 
+  &:hover {
+    background-color: $hover-blue;
+  }
+
+  &:active {
+    color: #88b6d1;
+    background-color: $active-blue;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+
   @include tablet {
     width: 42%;
     margin-left: 60px;

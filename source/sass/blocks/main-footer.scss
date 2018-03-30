@@ -1,5 +1,4 @@
 .main-footer {
-  outline: 2px solid grey;
   text-align: center;
   background-color: $white;
   display: flex;
@@ -27,9 +26,18 @@
 
 .htmlacademy {
   vertical-align: middle;
-  height: 36px;
-  width: 27px;
+  height: 43px;
+  width: 43px;
   fill: $black;
+
+  &:hover {
+    fill: $blue;
+  }
+
+  &:active {
+    fill: $black;
+    opacity: 0.3;
+  }
 }
 
 

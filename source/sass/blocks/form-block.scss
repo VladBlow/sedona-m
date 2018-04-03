@@ -27,37 +27,58 @@
 
   &__input-textarea {
     min-height: 160px;
-    padding: 20px;
-    border: none;
+    padding: 16px;
     @include font(18px, 26px, 700);
     resize: none;
+    width: 100%;
     background-color: $input-grey;
     color: $black;
+    border-width: 4px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: $input-grey;
+
+    &:hover {
+      border-color: #e5e5e5;
+      background-color: #e5e5e5;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: white;
+      border-color: #e5e5e5;
+    }
   }
 
   &__input-text {
     @include font(18px, 26px, 700);
     background-color: $input-grey;
-    border: none;
-    padding: 20px;
+    padding: 16px;
     color: $black;
     box-sizing: border-box;
+    border-width: 4px;
+    border-style: solid;
+    border-color: $input-grey;
 
     &:hover {
+      border-color: #e5e5e5;
       background-color: #e5e5e5;
     }
 
     &:focus {
+      outline: none;
       background-color: white;
-      outline: 4px solid #e5e5e5;
+      border-color: #e5e5e5;
     }
   }
 
   &__desc {
+    display: inline-block;
     position: relative;
-    padding: 21px 0 21px 70px;
+    padding-left: 70px;
     @include font(18px, 56px, 700);
     text-transform: none;
+    cursor: pointer;
   }
 
   &__input-radio, &__input-checkbox {
@@ -129,21 +150,19 @@
         background-color: $dark-grey;
       }
 
-      &:hover > &::before {
-          background-color: #e5e5e5;
-        }
+      &:hover::before {
+        background-color: #e5e5e5;
       }
 
-      &:active {
-        .form-block__desc::before {
-          background-color: #d5d5d5;
-        }
+      &:active::before {
+        background-color: #d5d5d5;
+      }
 
-        .form-block__desc::after {
-          opacity: 0.3;
-        }
+      &:active::after {
+        opacity: 0.3;
       }
     }
+  }
 
   &--visited {
     .form-block__desc {
@@ -163,13 +182,25 @@
       &::after {
         display: none;
         position: absolute;
-        top: 17px;
-        left: 17px;
+        top: 19px;
+        left: 18px;
         content: "";
-        width: 22px;
-        height: 22px;
+        width: 23px;
+        height: 16px;
         border-radius: 50%;
-        background-color: $dark-grey;
+        background-image: url('../img/icon-tick.svg');
+      }
+
+      &:hover::before {
+        background-color: #e5e5e5;
+      }
+
+      &:active::before {
+        background-color: #d5d5d5;
+      }
+
+      &:active::after {
+        opacity: 0.3;
       }
     }
   }
@@ -188,6 +219,12 @@
     width: 50%;
     padding: 20px 60px;
     border: none;
+
+    &--textarea {
+      width: 100%;
+      min-height: 160px;
+      box-sizing: content-box;
+    }
 
     &--rate {
       order: -1;
@@ -230,17 +267,6 @@
 
       .form-block__title {
         width: 100%;
-      }
-    }
-
-    &--textarea {
-      width: 100%;
-
-      .form-block__input-textarea {
-        display: block;
-        height: 120px;
-        padding: 20px;
-        border: none;
       }
     }
   }

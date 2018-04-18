@@ -7,7 +7,7 @@
   &__title {
     @include font(18px, 26px, 700);
     margin: 0;
-    padding: 20px 0 35px;
+    padding: 20px 0 30px;
   }
 
   &__text {
@@ -22,13 +22,22 @@
 }
 
 
-@media (min-width: $tablet) {
+@include tablet {
   .intro {
     width: 500px;
-    margin-bottom: 70px;
+    margin: 30px auto;
 
     &__title {
+      @include font(21px, 26px, 700);
+    }
+  }
+
+  .intro--form, .intro--photo {
+    .intro__title {
       @include font(30px, 30px, 700);
     }
   }
 }
+
+
+

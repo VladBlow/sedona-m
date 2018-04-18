@@ -3,6 +3,11 @@
   text-align: center;
   padding: 30px 20px;
   border-bottom: 1px solid $border-grey;
+  position: relative;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
 
   &__title {
     display: block;
@@ -13,8 +18,12 @@
   }
 
   &__number {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     display: inline-block;
+
+    &:after {
+      content: ""
+    }
   }
 
   &__text {
@@ -25,19 +34,30 @@
     background-color: $blue;
     color: $white;
     padding: 40px 20px;
+    border: none;
 
     .feature__title {
       color: $white;
     }
+  }
+
+  &--first {
+    background-image: url("../img/bg-triangle.svg");
+    background-position-y: -10px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: 103% auto;
+    padding-top: 18%;
   }
 }
 
 
 @media (min-width: $tablet) {
   .feature {
-    width: 33.33%;
+    width: 33.4%;
     padding: 50px 0;
     box-sizing: border-box;
+    border: none;
 
     &__title {
       @include font(21px, 26px, 700);
@@ -46,6 +66,10 @@
 
     &__text {
       padding: 0 45px;
+    }
+
+    &--first {
+      background-image: none;
     }
   }
 

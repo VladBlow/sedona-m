@@ -41,24 +41,24 @@
       </header>
       <main>
         <!-- <div class="container container--form"> -->
-          <section class="intro">
+          <section class="intro intro--form">
             <h2 class="intro__title">Оставьте свой отзыв</h2>
-            <p class="intro__text--form">Помогите нашим отелям стать лучше!<br>
-            Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+            <p class="intro__text--form">Помогите нашим отелям стать лучше! Оставьте отзыв о них,<br>
+            а также о посещенных вами достопримечательностях</p>
           </section>
           <form class="flex-row" action="https://echo.htmlacademy.ru" method="post">
             <div class="form-block form-block--name">
               <b class="form-block__title">Представьтесь:</b>
               <label class="form-block__item">
-                <span class="form-block__subtitle">Имя*</span>
+                <span class="form-block__subtitle">Имя*:</span>
                 <input class="form-block__input-text" type="text" name="name" placeholder="Петр">
               </label>
               <label class="form-block__item">
-                <span class="form-block__subtitle">Фамилия*</span>
+                <span class="form-block__subtitle">Фамилия*:</span>
                 <input class="form-block__input-text" type="text" name="last-name" placeholder="Иванов">
               </label>
               <label class="form-block__item">
-                <span class="form-block__subtitle">Отчество*</span>
+                <span class="form-block__subtitle">Отчество:</span>
                 <input class="form-block__input-text" type="text" name="fathers-name" placeholder="Александрович">
               </label>
             </div>
@@ -66,7 +66,7 @@
               <b class="form-block__title">Контактная информация:</b>
               <label class="form-block__item">
                 <span class="form-block__subtitle">Контактный телефон*:</span>
-                <input class="form-block__input-text form-block__input-text--contacts form-block__input-text--phone" type="phone" name="phone" placeholder="Введите телефон">
+                <input class="form-block__input-text form-block__input-text--contacts form-block__input-text--phone" type="tel" name="phone" placeholder="Введите телефон">
               </label>
               <label class="form-block__item">
                 <span class="form-block__subtitle">Электронная почта*:</span>
@@ -89,26 +89,29 @@
               </div>
             </div>
             <div class="form-block form-block--visited">
-              <b class="form-block__title">Посещенные достопримечательности:</b>
-              <div class="flex-column">
+              <b class="form-block__title">Посещенные<br>
+              достопримечательности:</b>
+              <div class="form-block__visited-wrap">
+                <!-- <div class="flex-column"> -->
                 <div class="form-block__item">
-                  <input class="form-block__input-checkbox" type="checkbox" name="Devils bridge" id="Devils bridge" checked>
-                  <label class="form-block__desc" for="Devils bridge">Мост Дьявола</label>
+                  <input class="form-block__input-checkbox" type="checkbox" name="Devils bridge" id="Devils-bridge" checked>
+                  <label class="form-block__desc" for="Devils-bridge">Мост Дьявола</label>
                 </div>
+                <div class="form-block__item">
+                  <input class="form-block__input-checkbox" type="checkbox" name="Bell rock" id="Bell-rock">
+                  <label class="form-block__desc" for="Bell-rock">Гора-Колокол</label>
+                </div>
+              <!-- </div>
+              <div class="flex-column"> -->
                 <div class="form-block__item">
                   <input class="form-block__input-checkbox" type="checkbox" name="Slide-park" id="Slide-park" checked>
                   <label class="form-block__desc" for="Slide-park">Слайд-парк</label>
                 </div>
-              </div>
-              <div class="flex-column">
                 <div class="form-block__item">
-                  <input class="form-block__input-checkbox" type="checkbox" name="Bell rock" id="Bell rock">
-                  <label class="form-block__desc" for="Bell rock">Гора-Колокол</label>
+                  <input class="form-block__input-checkbox" type="checkbox" name="Red rocks" id="Red-rocks" checked>
+                  <label class="form-block__desc" for="Red-rocks">Красные скалы</label>
                 </div>
-                <div class="form-block__item">
-                  <input class="form-block__input-checkbox" type="checkbox" name="Red rocks" id="Red rocks" checked>
-                  <label class="form-block__desc" for="Red rocks">Красные скалы</label>
-                </div>
+              <!-- </div> -->
               </div>
             </div>
             <div class="form-block form-block--textarea">

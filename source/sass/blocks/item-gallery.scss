@@ -24,12 +24,29 @@
   }
 
   &__likes {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     font-weight: 700;
+  }
+
+  &__likes-count {
+    padding-left: 15px;
+    padding-top: 6px;
   }
 }
 
+.icon-like {
+  // position: absolute;
+  // display: block;
+  width: 22px;
+  height: 22px;
+  fill: #b2b2b2;
+}
+
 .wrapper--photo {
+  position: relative;
   padding-top: 20px;
   box-sizing: border-box;
 }
@@ -38,6 +55,7 @@
   .item-gallery {
     padding: 0;
     width: 50%;
+    border: none;
 
     &:first-child {
       width: 100%;
@@ -52,6 +70,10 @@
       .wrapper--photo {
         background-color: #eaeaea;
       }
+    }
+
+    &__likes-count {
+      padding-left: 10px;
     }
   }
 

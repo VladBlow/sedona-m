@@ -12,6 +12,21 @@
   }
 
   &__item {
+    &:last-child {
+      background-color: white;
+      border: none;
+      height: 56px;
+    }
+
+    &--active {
+      cursor: default;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
     border-top: 1px solid #9ac2db;
     border-bottom: 1px solid #678fa8;
     padding: 0 20px;
@@ -19,23 +34,15 @@
     &:hover {
       background-color: $hover-blue;
       border-top-color: #86b2cd;
-      border-bottom-color: #cccccc;
     }
 
     &:active {
       background-color: $active-blue;
       border-top-color: #77acca;
-      border-bottom-color: #cccccc;
     }
 
     &:active > a {
       opacity: 0.3;
-    }
-
-    &:last-child {
-      background-color: white;
-      border: none;
-      height: 56px;
     }
   }
 
@@ -60,7 +67,6 @@
     }
 
     &__item {
-      border: none;
       width: 20%;
 
       &:last-child {
@@ -69,20 +75,6 @@
 
       &:nth-child(3), &:nth-child(4) {
         order: 2;
-      }
-
-      &:hover, &:active {
-        background-color: $white;
-        color: $black;
-      }
-
-      &:hover > a {
-        color: $blue;
-      }
-
-      &:active > a {
-        color: black;
-        opacity: 0.3;
       }
 
       &--active {
@@ -98,6 +90,24 @@
         &:active > .main-menu__link {
           opacity: 0.3;
         }
+      }
+    }
+
+    &__link {
+      border: none;
+
+      &:hover, &:active {
+        background-color: $white;
+        color: $black;
+      }
+
+      &:hover {
+        color: $blue;
+      }
+
+      &:active > a {
+        color: black;
+        opacity: 0.3;
       }
     }
 

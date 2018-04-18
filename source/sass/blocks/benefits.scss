@@ -7,11 +7,11 @@
   padding-right: 40px;
 
   &__item {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     position: relative;
 
     &:first-child {
-      margin-top: 40px;
+      margin-top: 35px;
     }
   }
 
@@ -19,7 +19,7 @@
     @include font(18px, 26px, 700);
     display: block;
     color: $black;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     margin: 0;
   }
 

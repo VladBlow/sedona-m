@@ -21,7 +21,7 @@
 
   &__subtitle {
     padding-right: 15px;
-    padding-bottom: 15px;
+    margin: auto 0;
     line-height: 26px;
   }
 
@@ -75,7 +75,7 @@
   &__desc {
     display: inline-block;
     position: relative;
-    padding-left: 70px;
+    padding-left: 75px;
     @include font(18px, 56px, 700);
     text-transform: none;
     cursor: pointer;
@@ -85,18 +85,14 @@
     display: none;
   }
 
-  &--rate, &--visited {
-    .form-block__item {
-      margin-bottom: 23px;
-    }
-  }
-
   &--name {
+    padding-bottom: 5px;
+
     .form-block__item {
       width: 100%;
       display: flex;
       flex-direction: row;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       justify-content: flex-start;
 
       &__subtitle {
@@ -111,19 +107,25 @@
   }
 
   &--contacts {
-    .form-block__item {
-      display: flex;
-      flex-direction: column;
+    .form-block {
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
 
       &__subtitle {
-        padding: 0;
-        padding-right: 22px;
-        padding-bottom: 15px;
+        padding: 0 22px 10px 22px;
       }
     }
   }
 
   &--rate {
+    .form-block__item {
+      margin-bottom: 15px;
+    }
+
     .form-block__desc {
 
       &::before {
@@ -165,6 +167,12 @@
   }
 
   &--visited {
+    padding-bottom: 0;
+
+    .form-block__item {
+      margin-bottom: 23px;
+    }
+
     .form-block__desc {
 
       &::before {
@@ -220,6 +228,22 @@
     padding: 20px 60px;
     border: none;
 
+    &__title {
+      position: relative;
+      @include font(21px, 26px, 700);
+      margin-bottom: 60px;
+
+      &:after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(to left, #dbdbdb, #dbdbdb 20%, transparent 20%, transparent 80%,  #dbdbdb 80%);
+        content: "";
+      }
+    }
+
     &--textarea {
       width: 100%;
       min-height: 160px;
@@ -232,12 +256,33 @@
 
       .form-block__title {
         text-align: left;
+
+        &:after {
+          display: none;
+        }
       }
     }
 
     &--name {
+      position: relative;
+      margin-bottom: 10px;
+
+      &:after {
+        position: absolute;
+        top: 23px;
+        left: 0;
+        width: 1px;
+        height: 85%;
+        background-color: #dbdbdb;
+        content: "";
+      }
+
       .form-block__title {
         text-align: left;
+
+        &:after {
+          display: none;
+        }
       }
     }
 
@@ -245,21 +290,27 @@
       width: 100%;
 
       .form-block__title {
+        position: relative;
+        width: 100%;
         margin-bottom: 30px;
-      }
-
-      .form-block__subtitle {
-        line-height: 40px;
-        padding: 0;
-      }
-
-      .form-block__item {
-        margin-bottom: 20px;
       }
     }
 
     &--visited {
+      width: 100%;
+
+      .form-block__item {
+        margin-bottom: 33px;
+      }
+
+      .form-block__title {
+        margin-bottom: 45px;
+      }
+    }
+
+    &__visited-wrap {
       width: 70%;
+      display: flex;
       margin: 0 auto;
       flex-direction: row;
       flex-wrap: wrap;
@@ -268,12 +319,50 @@
       .form-block__title {
         width: 100%;
       }
+
+      .form-block__item {
+        width: 50%;
+      }
     }
+
+
   }
 }
 
 @include desktop {
   .form-block {
     padding: 20px 120px;
+
+    &__title {
+
+      &:after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(to left, #dbdbdb, #dbdbdb 30%, transparent 30%, transparent 70%,  #dbdbdb 70%);
+        content: "";
+      }
+    }
+
+    &__visited-wrap {
+      width: 100%;
+      justify-content: space-between;
+
+      .form-block__item {
+        width: auto;
+      }
+    }
+
+    &--rate {
+      .form-block__title {
+        padding-left: 70px;
+      }
+    }
+
+    &--contacts {
+      // flex-direction: row;
+    }
   }
 }

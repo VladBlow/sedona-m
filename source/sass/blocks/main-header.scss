@@ -4,7 +4,7 @@
     height: 390px;
     background-color: #ccc;
     background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
-    background-size: 100% auto, auto 215px, cover;
+    background-size: 101.6% auto, auto 215px, cover;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position-y: bottom, center, top;
     background-position-x: center;
@@ -16,7 +16,7 @@
     &--photo, &--form {
       height: 160px;
       background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-mobile@2x.jpg");
-      background-size: 100% auto, auto 40px, 200%;
+      background-size: 101.6% auto, auto 40px, 200%;
       background-position-y: bottom, center, bottom;
       background-position-x: center;
     }
@@ -28,7 +28,7 @@
     &__greetings {
       height: 520px;
       background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-tablet@1x.jpg");
-      background-size: 100% auto, auto 360px, cover;
+      background-size: 101.6% auto, auto 360px, cover;
 
       @include retina {
         background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-tablet@2x.jpg");
@@ -37,7 +37,7 @@
       &--photo, &--form {
         height: 290px;
         background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-tablet@1x.jpg");
-        background-size: 100% auto, auto 80px, cover;
+        background-size: 101.6% auto, auto 80px, cover;
 
         @include retina {
           background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-tablet@2x.jpg");
@@ -50,19 +50,20 @@
 @include desktop {
   .main-header {
     &__greetings {
-      background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-desktop@1x.jpg");
-      background-size: 100% auto, auto 360px, cover;
+      background-image: url("http://brotherilia.github.io/sedona/img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-desktop@1x.jpg");
+      background-size: 101.6% auto, auto 360px, cover;
+      // background-position: 50% bottom;
 
       @include retina {
-        background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-desktop@2x.jpg");
+        background-image: url("http://brotherilia.github.io/sedona/img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-desktop@2x.jpg");
       }
 
       &--photo, &--form {
-        background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-desktop@1x.jpg");
-        background-size: 100% auto, auto 80px, cover;
+        background-image: url("http://brotherilia.github.io/sedona/img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-desktop@1x.jpg");
+        background-size: 101.6% auto, auto 80px, cover;
 
         @include retina {
-          background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-desktop@2x.jpg");
+          background-image: url("http://brotherilia.github.io/sedona/img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona.svg"), url("../img/bg-back-desktop@2x.jpg");
         }
       }
     }

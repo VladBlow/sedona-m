@@ -55,3 +55,9 @@
     margin-bottom: 0;
   }
 }
+
+@include desktop {
+  .main-footer {
+    padding: 36px 120px;
+  }
+}

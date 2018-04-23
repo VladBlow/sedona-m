@@ -1,5 +1,5 @@
 .main-btn {
-  margin: 20px 20px 30px;
+  width: 100%;
   padding: 17px;
   color: $white;
   background-color: $blue;
@@ -11,7 +11,7 @@
 
   &--find-hotel {
     margin: 0;
-    width: 280px;
+    max-width: 460px;
   }
 
   &:hover {
@@ -30,17 +30,6 @@
 
 @include tablet {
   .main-btn {
-    width: 42%;
-    margin-left: 60px;
+    width: 50%;
   }
-
-  .main-btn--find-hotel {
-    margin: 0;
-  }
-}
-
-@include desktop {
-  width: 42%;
-  margin-left: 120px;
-  margin-bottom: 44px;
 }

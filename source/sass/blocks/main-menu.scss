@@ -1,8 +1,21 @@
 .main-menu {
+  position: relative;
   min-height: 56px;
   text-align: center;
   background-color: $blue;
   color: $white;
+
+  &__btn {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 22px;
+    height: 22px;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/icon-menu.svg");
+    cursor: pointer;
+  }
 
   &__list {
     @include unstyle;
@@ -12,7 +25,10 @@
   }
 
   &__item {
+    display: none;
+
     &:last-child {
+      display: inline-block;
       background-color: white;
       border: none;
       height: 56px;
@@ -20,6 +36,16 @@
 
     &--active {
       cursor: default;
+    }
+  }
+
+  &--open {
+    .main-menu__item {
+      display: inline-block;
+    }
+
+    .main-menu__btn {
+      background-image: url("../img/icon-cross.svg");
     }
   }
 
@@ -56,17 +82,21 @@
 
 
 
-@media (min-width: $tablet) {
+@include tablet {
   .main-menu {
     background-color: $white;
     color: $black;
 
+    &__btn {
+      display: none;
+    }
 
     &__list {
       flex-direction: row;
     }
 
     &__item {
+      display: inline-block;
       width: 20%;
 
       &:last-child {

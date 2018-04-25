@@ -1,6 +1,5 @@
 .social {
-  outline: 2px dashed black;
-  margin: 40px 0;
+  margin-bottom: 40px;
   text-align: center;
 
   &__list {
@@ -12,6 +11,34 @@
     display: inline-block;
     vertical-align: middle;
     margin: 0 3px;
+    width: 48px;
+    height: 48px;
+    background-color: $blue;
+
+    &:hover {
+      background-color: $hover-blue;
+    }
+
+    &:active {
+      background-color: $active-blue;
+    }
+
+    &:active > a {
+      opacity: 0.3;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__twi {
+    width: 20px;
+    height: 20px;
+    padding: 14px 0;
+    fill: $white;
   }
 }
 

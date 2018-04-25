@@ -1,6 +1,5 @@
 .find-hotel {
-  outline: 2px solid #0066ff;
-  padding: 30px 20px 50px;
+  padding: 35px 20px 50px;
   text-align: center;
 
   &__title {
@@ -15,5 +14,29 @@
   &__text {
     margin: 0;
     padding-bottom: 40px;
+  }
+
+  &__btn {
+    margin: 0;
+  }
+}
+
+@media (min-width: $tablet) {
+  .find-hotel {
+    padding: 60px 20px;
+
+    &__title {
+      @include font(30px, 30px, 700);
+      padding-bottom: 40px;
+    }
+
+    &__text {
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    &__btn {
+      width: 460px;
+    }
   }
 }

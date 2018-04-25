@@ -8,110 +8,203 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header class="main-header">
-        <div class="main-menu">
+    <div class="container">
+      <header class="main-header">
+        <div class="main-menu main-menu--open">
+          <button class="main-menu__btn" id="menu-btn"></button>
           <ul class="main-menu__list">
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="index.html">Главная</a>
+            <li class="main-menu__item main-menu__item--active">
+              <a class="main-menu__link">Главная</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link">Фото и видео</a>
+              <a class="main-menu__link" href="photo.html">Фото и видео</a>
             </li>
             <li class="main-menu__item">
               <a class="main-menu__link" href="form.html">Форма отзыва</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link" href="#">HTML Academy</a>
+              <a class="main-menu__link" href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link main-menu__link--logo">
-                <img src="#" width="102" height="83" alt="Логотип">
-              </a>
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="img/logo-sedona-desktop.svg">
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/logo-sedona-tablet.svg">
+                <img src="img/logo-sedona-mobile.svg" alt="Логотип">
+              </picture>
             </li>
           </ul>
         </div>
-        <div class="main-header__greetings">
-          <img src="#" width="320" height="389" alt="Седона">
-        </div>
+        <div class="main-header__greetings"></div>
       </header>
-    <main>
-      <section class="intro">
-        <h2 class="intro__title">Фото и видео</h2>
-        <p class="intro__text--photo">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике</p>
-      </section>
-      <section class="gallery">
-        <div class="gallery__item item-gallery"> <!-- убрать класс gallery__item, если он нигде не пригодится -->
-          <div class="item-gallery__image-holder">
-            <img src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Народные просторы">
-          </div>
-          <div class="wrapper">
-            <div class="flex-column">
-              <b class="item-gallery__title">Народные просторы</b>
-              <span class="item-gallery__author">Автор фото: Борис</span>
+      <main>
+        <div class="container container--photo">
+          <section class="intro intro--photo">
+            <h2 class="intro__title">Фото и видео</h2>
+            <p class="intro__text--photo">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике</p>
+          </section>
+          <section class="gallery">
+            <div class="item-gallery">
+              <div class="item-gallery__image-holder">
+                <picture>
+                  <source
+                    media="(min-width: 1000px)"
+                    srcset="img/photo-sunset-desktop@1x.jpg 1x,
+                            img/photo-sunset-desktop@2x.jpg 2x">
+                  <source
+                    media="(min-width: 500px)"
+                    srcset="img/photo-sunset-tablet@1x.jpg 1x,
+                            img/photo-sunset-tablet@2x.jpg 2x">
+                  <img src="img/photo-sunset-mobile@1x.jpg"
+                    srcset="img/photo-sunset-mobile@2x.jpg 2x"
+                    alt="Народные просторы">
+                </picture>
+              </div>
+              <div class="wrapper wrapper--photo">
+                <div class="flex-column">
+                  <b class="item-gallery__title">Неродные просторы</b>
+                  <span class="item-gallery__author">Автор фото: Борис</span>
+                </div>
+                <div class="item-gallery__likes">
+                  <svg class="icon-like">
+                    <use xlink:href="#icon-like"></use>
+                  </svg>
+                  <span class="item-gallery__likes-count">1350</span>
+                </div>
+              </div>
             </div>
-            <span class="item-gallery__likes">1350</span>
-          </div>
-        </div>
-        <div class="gallery__item item-gallery">
-          <div class="item-gallery__image-holder">
-            <img src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
-          </div>
-          <div class="wrapper">
-            <div class="flex-column">
-              <b class="item-gallery__title">Местная растительность</b>
-              <span class="item-gallery__author">Автор фото: Сергей</span>
+            <div class="gallery__item item-gallery">
+              <div class="item-gallery__image-holder">
+                <picture>
+                  <source
+                    media="(min-width: 1000px)"
+                    srcset="img/photo-cactus-desktop@1x.jpg 1x,
+                            img/photo-cactus-desktop@2x.jpg 2x">
+                  <source
+                    media="(min-width: 500px)"
+                    srcset="img/photo-cactus-tablet@1x.jpg 1x,
+                            img/photo-cactus-tablet@2x.jpg 2x">
+                  <img src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Местная растительность">
+                </picture>
+              </div>
+              <div class="wrapper wrapper--photo">
+                <div class="flex-column">
+                  <b class="item-gallery__title">Местная растительность</b>
+                  <span class="item-gallery__author">Автор фото: Сергей</span>
+                </div>
+                <div class="item-gallery__likes">
+                  <svg class="icon-like">
+                    <use xlink:href="#icon-like"></use>
+                  </svg>
+                  <span class="item-gallery__likes-count">143</span>
+                </div>
+              </div>
             </div>
-            <span class="item-gallery__likes">143</span>
+            <div class="gallery__item item-gallery">
+              <div class="item-gallery__image-holder">
+                <picture>
+                  <source
+                    media="(min-width: 1000px)"
+                    srcset="img/photo-roads-desktop@1x.jpg 1x,
+                            img/photo-roads-desktop@2x.jpg 2x">
+                  <source
+                      media="(min-width: 500px)"
+                      srcset="img/photo-roads-tablet@1x.jpg 1x,
+                              img/photo-roads-tablet@2x.jpg 2x">
+                  <img src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Дорога на север">
+                </picture>
+              </div>
+              <div class="wrapper wrapper--photo">
+                <div class="flex-column">
+                  <b class="item-gallery__title">Дорога на север</b>
+                  <span class="item-gallery__author">Автор фото: Петр</span>
+                </div>
+                <div class="item-gallery__likes">
+                  <svg class="icon-like">
+                    <use xlink:href="#icon-like"></use>
+                  </svg>
+                  <span class="item-gallery__likes-count">96</span>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__item item-gallery">
+              <div class="item-gallery__image-holder">
+                <picture>
+                  <source
+                    media="(min-width: 1000px)"
+                    srcset="img/photo-bridge-desktop@1x.jpg 1x,
+                            img/photo-bridge-desktop@2x.jpg 2x">
+                  <source
+                      media="(min-width: 500px)"
+                      srcset="img/photo-bridge-tablet@1x.jpg 1x,
+                              img/photo-bridge-tablet@2x.jpg 2x">
+                  <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола">
+                </picture>
+              </div>
+              <div class="wrapper wrapper--photo">
+                <div class="flex-column">
+                  <b class="item-gallery__title">Мост дьявола</b>
+                  <span class="item-gallery__author">Автор фото: Антон</span>
+                </div>
+                <div class="item-gallery__likes">
+                  <svg class="icon-like">
+                    <use xlink:href="#icon-like"></use>
+                  </svg>
+                  <span class="item-gallery__likes-count">254</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="promo-video">
+            <b class="promo-video__title">Все еще сомневаетесь?</b>
+            <p class="promo-video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+            <!-- <div class="promo-video__holder"> -->
+              <iframe class="promo-video__holder" width="100%" src="https://www.youtube.com/embed/DXhddzYCx0o" frameborder="0"></iframe>
+            <!-- </div> -->
+          </section>
+          <footer class="main-footer">
+          <b class="main-footer__tag">#VISITSEDONA</b>
+          <div class="social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__twi">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a  class="social__link" href="#">
+                  <svg class="social__twi">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__twi">
+                    <use xlink:href="#icon-youtube"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="gallery__item item-gallery">
-          <div class="item-gallery__image-holder">
-            <img src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
+          <div class="copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru" target="_blank">
+              <span class="copyright__title">Разработано</span>
+              <svg class="htmlacademy">
+                <use xlink:href="#htmlacademy"></use>
+              </svg>
+            </a>
           </div>
-          <b class="item-gallery__title">Дорога на север</b>
-          <span class="item-gallery__author">Автор фото: Петр</span>
-          <span class="item-gallery__likes">96</span>
+        </footer>
         </div>
-        <div class="gallery__item item-gallery">
-          <div class="item-gallery__image-holder">
-            <img src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
-          </div>
-          <b class="item-gallery__title">Мост дьявола</b>
-          <span class="item-gallery__author">Автор фото: Антон</span>
-          <span class="item-gallery__likes">254</span>
-        </div>
-      </section>
-      <section class="promo-video">
-        <b class="promo-video__title">Все еще сомневаетесь?</b>
-        <p class="promo-video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <div class="promo-video__holder"></div>
-      </section>
-      <footer class="main-footer">
-        <b class="main-footer__tag">#VISITSEDONA</b>
-        <div class="social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <img src="#" width="48" height="48">
-              </a>
-            </li>
-            <li class="social__item">
-              <a  class="social__link" href="#">
-                <img src="#" width="48" height="48">
-              </a>
-            </li>
-            <li class="social__item">
-              <a  class="social__link" href="#">
-                <img src="#" width="48" height="48">
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="copyright">
-          <span class="copyright__title">Разработано</span>
-          <a class="copyright__link" href="htmlacademy.ru"></a>
-        </div>
-      </footer>
-    </main>
+      </main>
+    </div>
+    <script type="text/javascript" src="js/inject-sprite.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

@@ -14,3 +14,24 @@
   display: flex;
   flex-direction: column;
 }
+
+
+@mixin retina {
+  @media
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}

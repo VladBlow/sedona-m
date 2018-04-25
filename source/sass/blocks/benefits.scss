@@ -1,17 +1,17 @@
 .benefits {
-  padding: 25px 0 40px;
   @include unstyle;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-left: 70px;
+  padding-right: 40px;
 
   &__item {
-    outline: 2px solid lightgreen;
-    padding: 10px 40px 0 70px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
+    position: relative;
 
     &:first-child {
-      order: -2;
+      margin-top: 35px;
     }
   }
 
@@ -19,7 +19,7 @@
     @include font(18px, 26px, 700);
     display: block;
     color: $black;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     margin: 0;
   }
 
@@ -28,19 +28,44 @@
   }
 }
 
+.icon-house, .icon-gift, .icon-burger {
+  position: absolute;
+  height: 39px;
+  top: -11px;
+  left: -185px;
+  fill: $blue;
+}
+
 @media (min-width: $tablet) {
   .benefits {
     flex-direction: row;
+    padding: 0;
 
     &__item {
       width: 33.33%;
-      padding: 160px 50px 60px;
+      padding: 60px 40px;
       margin: 0;
       text-align: center;
+
+      &:first-child {
+        margin: 0;
+        order: -2;
+      }
 
       &:nth-child(3) {
         order: -1;
       }
     }
+
+    &__title {
+      padding: 20px 0;
+    }
+  }
+
+  .icon-house, .icon-gift, .icon-burger {
+    position: static;
+    width: 72px;
+    height: 72px;
+    fill: $blue;
   }
 }

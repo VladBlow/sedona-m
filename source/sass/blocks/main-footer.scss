@@ -1,5 +1,4 @@
 .main-footer {
-  outline: 2px solid grey;
   text-align: center;
   background-color: $white;
   display: flex;
@@ -8,6 +7,7 @@
   align-items: center;
 
   &__tag {
+    margin: 40px 0;
     display: inline-block;
     vertical-align: middle;
     @include font(21px, 26px, 700);
@@ -15,9 +15,49 @@
   }
 }
 
+.copyright {
+  margin-bottom: 20px;
+
+  &__link {
+    color: $dark-grey;
+    text-decoration: none;
+  }
+}
+
+.htmlacademy {
+  vertical-align: middle;
+  height: 43px;
+  width: 43px;
+  fill: $black;
+
+  &:hover {
+    fill: $blue;
+  }
+
+  &:active {
+    fill: $black;
+    opacity: 0.3;
+  }
+}
+
+
 @media (min-width: $tablet) {
   .main-footer {
-    padding: 36px 0;
+    padding: 36px 60px;
     flex-direction: row;
+
+    &__tag {
+      margin: 0;
+    }
+  }
+
+  .copyright {
+    margin-bottom: 0;
+  }
+}
+
+@include desktop {
+  .main-footer {
+    padding: 36px 120px;
   }
 }

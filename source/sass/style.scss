@@ -1,9 +1,10 @@
 @import "variables.scss";
-@import "global.scss";
 @import "mixins.scss";
+@import "global.scss";
 //вспомогательные
 @import "helpers.scss";
 //блоки
+@import "blocks/button.scss";
 @import "blocks/main-header.scss";
 @import "blocks/main-menu.scss";
 @import "blocks/intro.scss";
@@ -15,7 +16,6 @@
 @import "blocks/main-footer.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
-@import "blocks/button.scss";
 //форма
 @import "blocks/form-block.scss";
 //фото

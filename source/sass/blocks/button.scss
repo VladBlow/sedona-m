@@ -1,6 +1,6 @@
 .main-btn {
-  margin: 20px;
-  padding: 20px;
+  width: 100%;
+  padding: 17px;
   color: $white;
   background-color: $blue;
   font-family: PT Sans, Arial, sans-serif;
@@ -8,4 +8,28 @@
   text-transform: uppercase;
   cursor: pointer;
   border: none;
+
+  &--find-hotel {
+    margin: 0;
+    max-width: 460px;
+  }
+
+  &:hover {
+    background-color: $hover-blue;
+  }
+
+  &:active {
+    color: #88b6d1;
+    background-color: $active-blue;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}
+
+@include tablet {
+  .main-btn {
+    width: 50%;
+  }
 }

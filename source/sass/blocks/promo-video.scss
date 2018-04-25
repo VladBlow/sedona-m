@@ -1,27 +1,54 @@
 .promo-video {
-  padding: 20px;
   text-align: center;
   background-color: $white;
+  padding: 20px;
   color: $black;
+  margin-bottom: 35px;
 
   &__title {
+    display: inline-block;
+    padding: 0 0 20px;
     @include font(18px, 26px, 700);
   }
 
+  &__text {
+    padding: 0 0 40px;
+    margin: 0;
+  }
+
   &__holder {
-    outline: 2px solid purple;
     display: block;
     margin: 0 auto;
-    width: 100%;
-    height: 200px;
-    background: url("../img/video-mobile@1x.jpg") 0 0 no-repeat;
+    min-height: 280px;
+    background: url("../img/video-mobile@2x.jpg") 0 0 no-repeat;
+    background-size: cover;
   }
 }
 
-@media (min-width: $desktop) {
+@include tablet {
   .promo-video {
+    padding: 0;
+
+    &__title {
+      @include font(30px, 30px, 700);
+      padding-top: 0;
+    }
+
+    &__holder {
+      min-height: 500px;
+      background: url("../img/video-tablet@2x.jpg") 0 0 no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+@include desktop {
+  .promo-video {
+
     &__holder {
       width: 66.66%;
+      background: url("../img/video-desktop@2x.jpg") 0 0 no-repeat;
+      background-size: cover;
     }
   }
 }

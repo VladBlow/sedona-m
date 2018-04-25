@@ -10,9 +10,10 @@
   <body>
     <div class="container">
       <header class="main-header">
-        <div class="main-menu">
+        <div class="main-menu main-menu--open">
+          <button class="main-menu__btn" id="menu-btn"></button>
           <ul class="main-menu__list">
-            <li class="main-menu__item">
+            <li class="main-menu__item main-menu__item--active">
               <a class="main-menu__link">Главная</a>
             </li>
             <li class="main-menu__item">
@@ -22,18 +23,22 @@
               <a class="main-menu__link" href="form.html">Форма отзыва</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link" href="#">HTML Academy</a>
+              <a class="main-menu__link" href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link main-menu__link--logo">
-                <img src="#" width="102" height="83" alt="Логотип">
-              </a>
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="img/logo-sedona-desktop.svg">
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/logo-sedona-tablet.svg">
+                <img src="img/logo-sedona-mobile.svg" alt="Логотип">
+              </picture>
             </li>
           </ul>
         </div>
-        <div class="main-header__greetings">
-          <img src="#" width="320" height="389" alt="Седона">
-        </div>
+        <div class="main-header__greetings"></div>
       </header>
       <main>
         <section class="intro">
@@ -41,7 +46,7 @@
           <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </section>
         <div class="wrapper">
-          <div class="feature feature--blue">
+          <div class="feature feature--first feature--blue">
             <h3 class="feature__title">Настоящий городок</h3>
             <span class="feature__number">№1</span>
             <p class="feature__text">Седона — не аттракцион для туристов, там течет своя жизнь</p>
@@ -52,14 +57,23 @@
         </div>
         <ul class="benefits">
           <li class="benefits__item">
+            <svg class="icon-house">
+              <use xlink:href="#icon-house"></use>
+            </svg>
             <b class="benefits__title">Жилье</b>
             <p class="benefits__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </li>
           <li class="benefits__item">
+            <svg class="icon-gift">
+              <use xlink:href="#icon-gift"></use>
+            </svg>
             <b class="benefits__title">Сувениры</b>
             <p class="benefits__text">Не только китайского, но и местного производства!</p>
           </li>
           <li class="benefits__item">
+            <svg class="icon-burger">
+              <use xlink:href="#icon-burger"></use>
+            </svg>
             <b class="benefits__title">Еда</b>
             <p class="benefits__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </li>
@@ -94,38 +108,48 @@
         <section class="find-hotel">
           <b class="find-hotel__title">Заинтересовались?</b>
           <p class="find-hotel__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button class="main-btn">Найти гостиницу</button>
+          <button class="main-btn main-btn--find-hotel">Найти гостиницу</button>
         </section>
-        <article class="map-holder">
-          <img src="img/bg-map-mobile@1x.jpg" width="320" height="350" alt="Карта Седоны">
-        </article>
+        <iframe class="map-holder" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.13565749244!2d-111.83015809006807!3d34.85444381567573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1523300786918" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
         <footer class="main-footer">
           <b class="main-footer__tag">#VISITSEDONA</b>
           <div class="social">
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link" href="#">
-                  <img src="#" width="48" height="48">
+                  <svg class="social__twi">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a  class="social__link" href="#">
-                  <img src="#" width="48" height="48">
+                  <svg class="social__twi">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a  class="social__link" href="#">
-                  <img src="#" width="48" height="48">
+                <a class="social__link" href="#">
+                  <svg class="social__twi">
+                    <use xlink:href="#icon-youtube"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
           </div>
           <div class="copyright">
-            <span class="copyright__title">Разработано</span>
-            <a class="copyright__link" href="htmlacademy.ru"></a>
+            <a class="copyright__link" href="https://htmlacademy.ru" target="_blank">
+              <span class="copyright__title">Разработано</span>
+              <svg class="htmlacademy">
+                <use xlink:href="#htmlacademy"></use>
+              </svg>
+            </a>
           </div>
         </footer>
       </main>
     </div>
+    <script type="text/javascript" src="js/inject-sprite.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
